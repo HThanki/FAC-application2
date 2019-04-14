@@ -1,3 +1,16 @@
-body {
+
+.info__headshot-img {
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+.left {
     background: green;
+    float: left;
+    width: 50%;
+}
+
+.right {
+
 }
