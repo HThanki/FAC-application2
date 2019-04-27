@@ -3,8 +3,8 @@ const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 
 const auto = false;
-const intervalTime = 5000;
-let slideInterval;
+const intervalTime = 8000;
+// let slideInterval;
 
 function nextSlide() {
     const current = document.querySelector('.current');
@@ -16,7 +16,7 @@ function nextSlide() {
         slides[0].classList.add('current');
     }
 
-    setTimeout(() => current.classList.remove('current'));
+    // setTimeout(() => current.classList.remove('current'));
 }
 
 
@@ -32,7 +32,7 @@ function prevSlide() {
         slides[slides.length-1].classList.add('current');
     }
 
-    setTimeout(() => current.classList.remove('current'));
+    // setTimeout(() => current.classList.remove('current'));
 }
 
 function keyMove(e) {
@@ -45,8 +45,11 @@ function keyMove(e) {
 }
 
 if(auto) {
-    slideInterval = setInterval(nextSlide, intervalTime );
+    setInterval(nextSlide, intervalTime );
 }
+
+//play/pause button function
+
 
 
 window.addEventListener('keydown', keyMove);
