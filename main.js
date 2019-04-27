@@ -52,12 +52,13 @@ function slideControl() {
         pause.innerHTML = 'Pause Slideshow';
     } else {
     //if not paused, stop slideshow, change paused status and change button wording
+        clearInterval(intervalTime);
         paused = true;
         pause.innerHTML = 'Play Slideshow';        
     }
 }
 
-//Add EventListeners to variables storing DOM elements/hook up functions above to the DOM elements
+//Add EventListeners to variables storing DOM elements
 
 window.addEventListener('keydown', keyMove);
 next.addEventListener('click', nextSlide);
