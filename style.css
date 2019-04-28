@@ -139,12 +139,16 @@ h2 {
 
     header {
         flex-direction: column;
-        font-size: 0.5em;
+        font-size: 0.8em;
       }
       #logo {
         order: -1;
       }
     
+      .buttons button {
+          
+      }
+
       .buttons button#pause {
         top: 15%;
         left: 35%;
@@ -155,6 +159,6 @@ h2 {
     }
 
     .slide .content {
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 }
