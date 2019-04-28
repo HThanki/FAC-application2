@@ -74,11 +74,8 @@ body {
     padding: 35px;
 }
 
-/* .slide.content h1 {
-    margin-bottom: 10px;
-} */
 h2 {
-    margin: 5px;
+    margin-bottom: 5px;
 }
 
 .buttons button {
