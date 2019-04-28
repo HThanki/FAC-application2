@@ -33,9 +33,11 @@ function prevSlide() {
 }
 
 function keyMove(e) {
+    //if right arrow key pressed, move to next slide
     if (e.keyCode == "39") {
         nextSlide();
     }
+    //if left arrow key pressed, move to previos slide
     if (e.keyCode == "37") {
         prevSlide();
     }
@@ -46,7 +48,7 @@ function slideControl() {
     //if play is true, start slideshow, change play status and change button wording
     if(play) {
         pause.innerHTML = 'Pause Slideshow';
-        interval = setInterval(nextSlide, 2000);
+        interval = setInterval(nextSlide, 3000);
         play = false;
     } else {
     //if play is false, stop slideshow, change play status and change button wording

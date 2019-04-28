@@ -97,13 +97,13 @@ h2 {
 
 .buttons button#next {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 15px;
 }
 
 .buttons button#prev {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 15px;
 }
 
@@ -127,6 +127,10 @@ h2 {
 
 .slide:nth-child(4) {
     background: url('./img/4.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5) {
+    background: url('./img/5.jpg') no-repeat center center/cover;
 }
 
 @media(max-width: 500px) {
