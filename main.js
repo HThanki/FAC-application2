@@ -48,7 +48,7 @@ function slideControl() {
     //if play is true, start slideshow, change play status and change button wording
     if(play) {
         pause.innerHTML = 'Pause Slideshow';
-        interval = setInterval(nextSlide, 3000);
+        interval = setInterval(nextSlide, 5000);
         play = false;
     } else {
     //if play is false, stop slideshow, change play status and change button wording
