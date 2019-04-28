@@ -54,7 +54,6 @@ body {
 .slide {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -68,10 +67,12 @@ body {
 .slide .content {
     position: absolute;
     bottom: 30px;
-    width: 70%;
+    width: 80%;
     background-color: rgba(255,255,255, 0.8);
     color: #333;
     padding: 35px;
+    left: 10%;
+
 }
 
 h2 {
@@ -94,13 +95,13 @@ h2 {
 
 .buttons button#next {
     position: absolute;
-    top: 30%;
+    top: 50%;
     right: 15px;
 }
 
 .buttons button#prev {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 15px;
 }
 
@@ -133,6 +134,7 @@ h2 {
 @media(max-width: 500px) {
     .slide .content {
         width: 100%;
+        left: 0;
     }
 
     header {
@@ -146,4 +148,7 @@ h2 {
         top: 20%;
     }
 
+    .buttons button#next, .buttons button#prev {
+        top: 10%;
+    }
 }
