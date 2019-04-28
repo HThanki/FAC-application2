@@ -146,16 +146,17 @@ h2 {
       }
     
       .buttons button {
-          
+
       }
 
       .buttons button#pause {
-        top: 15%;
-        left: 35%;
+        top: 20%;
+        padding: 10px;
+
     }
 
     .buttons button#next, .buttons button#prev {
-        top: 15%;
+        padding: 10px;;
     }
 
     .slide .content {
