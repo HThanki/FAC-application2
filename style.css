@@ -11,7 +11,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 header a {
@@ -68,15 +67,18 @@ body {
 
 .slide .content {
     position: absolute;
-    bottom: 70px;
+    bottom: 30px;
     width: 70%;
     background-color: rgba(255,255,255, 0.8);
     color: #333;
     padding: 35px;
 }
 
-.slide.content h1 {
+/* .slide.content h1 {
     margin-bottom: 10px;
+} */
+h2 {
+    margin: 5px;
 }
 
 .buttons button {

@@ -3,9 +3,8 @@ const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const pause = document.querySelector('#pause');
 
-let paused = false;
-const intervalTime = 1000;
-pause.innerHTML = 'Pause Slideshow';
+let play = false;
+let interval = null;
 
 function nextSlide() {
     const current = document.querySelector('.current');
@@ -19,7 +18,6 @@ function nextSlide() {
         slides[0].classList.add('current');
     }
 }
-
 
 function prevSlide() {
     const current = document.querySelector('.current');
@@ -45,24 +43,24 @@ function keyMove(e) {
 
 //play/pause slideshow
 function slideControl() {
-    //if paused, start slideshow, change paused status and change button wording
-    if(paused) {
-        setInterval(nextSlide, intervalTime);
-        paused = false;
+    //if play is true, start slideshow, change play status and change button wording
+    if(play) {
         pause.innerHTML = 'Pause Slideshow';
+        interval = setInterval(nextSlide, 2000);
+        play = false;
     } else {
-    //if not paused, stop slideshow, change paused status and change button wording
-        clearInterval(intervalTime);
-        paused = true;
-        pause.innerHTML = 'Play Slideshow';        
+    //if play is false, stop slideshow, change play status and change button wording
+        pause.innerHTML = 'Play Slideshow';
+        clearInterval(interval);
+        play = true;
     }
 }
 
-//Add EventListeners to variables storing DOM elements
 
+//Add EventListeners to variables storing DOM elements
 window.addEventListener('keydown', keyMove);
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 pause.addEventListener('click', slideControl);
 
-// slideControl();
+slideControl();
